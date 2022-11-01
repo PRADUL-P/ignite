@@ -7,7 +7,9 @@
     <title>IGNITE 2022 - STM Sports Day</title>
     <meta content="" name="description" />
     <meta name="keywords" content="STM Kannur,STM123,STMkannur,stmkannur,STMKANNUR,STM KANNUR,st.thomas college of engineering and technology,kannur,chengannur,mattannur,sivapuram,malayalam,engineering,civil,stthomascollegeofengineering,kannurengineers,ignte2022,ignite2k22,ignitestm,stmignte,ignite stm,,muhammedminhajmahroof.Muhammed Minhaj Mahroof,minhaj palathayi,i_yam_three_,pradul-p,pradul stm,pradul,minhaj stm,crisbin,isha sudhr,rajeth,muhammed minhaj mahroof kerala,jithin stm,cse stm,ignites ">
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js" integrity="sha512-r22gChDnGvBylk90+2e/ycr3RVrDi8DIOkIGNhJlKfuyQM4tIRAI062MaV8sfjQKYVGjOBaZBOA87z+IhZE9DA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    
     <!-- Favicons -->
   <link href="assets/img/ignite.png" rel="icon">
   <link href="assets/img/ignite.png" rel="apple-touch-icon">
@@ -1395,6 +1397,19 @@
                           >DAY 1</a
                         >
                       </li>
+                      <li class="nav-item">
+                        <a
+                          class="nav-link"
+                          id="pills-contact2-tab"
+                          data-toggle="pill"
+                          href="#pills-contact2"
+                          role="tab"
+                          aria-controls="pills-contact2"
+                          aria-selected="false"
+                          >DAY 2</a
+                        >
+                      </li>
+                      
                     </ul>
                     <div class="tab-content" id="pills-tabContent">
                       <div
@@ -1571,8 +1586,7 @@
                         class="tab-pane fade"
                         id="pills-contact"
                         role="tabpanel"
-                        aria-labelledby="pills-contact-tab"
-                      >
+                        aria-labelledby="pills-contact-tab" >
                         <div class="row align-items-center">
                           <div class="col-md-12">
                             <div
@@ -1589,24 +1603,24 @@
                                       <div class="section-title">
                                         <h2>DAY 1 EVENTS SCHEDULE</h2>
                                       </div>
-                                      <table class="table">
+                                      <table class="table tb1">
                                         <thead>
                                           <tr>
                                             <th scope="col">TIME</th>
                                             <th scope="col">EVENT</th>
                                             <th scope="col">CATEGORY</th>
                                             <th scope="col">ROUND</th>
+                                            <th scope="col">LOCATION </th>
+
                                           </tr>
                                         </thead>
                                         <tbody>
                                           
-                                          <tr>
-                                            <td></td>
+                                           
+                                          <tr class="table tb1">
                                             
-                                            <td></td>
-                                            <td>upload soon .....</td>
-                                            <td></td>
-                                          </tr>
+                                          </tr> 
+                                          
                                         </tbody>
                                       </table>
                                     </div>
@@ -1617,6 +1631,54 @@
                           </div>
                         </div>
                       </div>
+                      <div
+                      class="tab-pane fade"
+                      id="pills-contact2"
+                      role="tabpanel"
+                      aria-labelledby="pills-contact2-tab" >
+                      <div class="row align-items-center">
+                        <div class="col-md-12">
+                          <div
+                            class="row bg-transparent align-items-center ml-0 mr-0 py-4 match-entry"
+                          >
+                            <div class="container">
+                              <div class="row justify-content-center">
+                                <div class="col-12">
+                                  <div
+                                    class="table-responsive bg-gradient"
+                                    data-mdb-perfect-scrollbar="true"
+                                    style="position: relative; height: 445px"
+                                  >
+                                    <div class="section-title">
+                                      <h2>DAY 2 EVENTS SCHEDULE</h2>
+                                    </div>
+                                    <table class="table tb2">
+                                      <thead>
+                                        <tr>
+                                          <th scope="col">TIME</th>
+                                          <th scope="col">EVENT</th>
+                                          <th scope="col">CATEGORY</th>
+                                          <th scope="col">ROUND</th>
+                                          <th scope="col">LOCATION </th>
+
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        
+                                         
+                                        <tr class="tb2">
+                                          
+                                        </tr> 
+                                      </tbody>
+                                    </table>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                     </div>
                   </div>
                 </div>
@@ -1624,6 +1686,7 @@
             </div>
           </div>
         </div>
+        
       </section>
       <!-- End More Services Section -->
 
@@ -1906,6 +1969,46 @@
       class="back-to-top d-flex align-items-center justify-content-center"
       ><i class="bi bi-arrow-up-short"></i
     ></a>
+
+<!-- google sheet intergate code -->
+    <script>
+      let table = document.querySelector(".tb1");
+      (
+          async() => {
+              let workbook = XLSX.read(await (await fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vR2v0mbVt6a5WGHi67AQXpnBTZA-cPWSqpwBKQtX5pUlzK1bi7TMgVNN-EJHWLinm5JAXEW3jN2w7SZ/pub?gid=0&single=true&output=csv")).arrayBuffer());
+              console.log(workbook);
+              let worksheet = workbook.SheetNames;
+              worksheet.forEach(name => {
+                  let html = XLSX.utils.sheet_to_html(workbook.Sheets[name]);
+                  table.innerHTML += `
+               ${html}
+                  `;
+                 
+              }
+              )
+          }
+      )()
+   
+    </script>
+    <script>
+      let table2 = document.querySelector(".tb2");
+      (
+          async() => {
+              let workbook = XLSX.read(await (await fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vTPEv4AmgSHttE3TdIP-UPuWlfzaXxX-RiizueGhPyDNQjAmkdUv3fgD8noOVfhjqWbL7VCn2bDtet0/pub?gid=0&single=true&output=csv")).arrayBuffer());
+              console.log(workbook);
+              let worksheet = workbook.SheetNames;
+              worksheet.forEach(name => {
+                  let html = XLSX.utils.sheet_to_html(workbook.Sheets[name]);
+                  table2.innerHTML += `
+               ${html}
+                  `;
+                 
+              }
+              )
+          }
+      )()
+
+    </script>
 
     <!-- Vendor JS Files -->
     <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
