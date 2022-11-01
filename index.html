@@ -1975,6 +1975,7 @@
       let table = document.querySelector(".tb1");
       (
           async() => {
+             // google sheet link   https://docs.google.com/spreadsheets/d/1VtO63fQeiapwbF4VraPim9hlnbQCCy7nowQjY2FoYwM/edit#gid=0
               let workbook = XLSX.read(await (await fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vR2v0mbVt6a5WGHi67AQXpnBTZA-cPWSqpwBKQtX5pUlzK1bi7TMgVNN-EJHWLinm5JAXEW3jN2w7SZ/pub?gid=0&single=true&output=csv")).arrayBuffer());
               console.log(workbook);
               let worksheet = workbook.SheetNames;
@@ -1994,6 +1995,7 @@
       let table2 = document.querySelector(".tb2");
       (
           async() => {
+            // google sheet link   https://docs.google.com/spreadsheets/d/1wZl2nQEHXt_nnPm884nucI9k1Pds99Ppw1LltxHi_ZU/edit#gid=0
               let workbook = XLSX.read(await (await fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vTPEv4AmgSHttE3TdIP-UPuWlfzaXxX-RiizueGhPyDNQjAmkdUv3fgD8noOVfhjqWbL7VCn2bDtet0/pub?gid=0&single=true&output=csv")).arrayBuffer());
               console.log(workbook);
               let worksheet = workbook.SheetNames;
