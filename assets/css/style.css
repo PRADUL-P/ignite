@@ -1995,11 +1995,35 @@ section {
   -ms-transform: scale(1.2);
   transform: scale(1.2);
 }
+.site-block-tab #pills-tab {
+  padding: 0;
+  margin: 0 auto 15px auto;
+  list-style: none;
+  text-align: center;
+  border-radius: 50px;
+  padding: 2px 15px;
+}
+
+.site-block-tab #pills-tab li {
+  cursor: pointer;
+  display: inline-block;
+  padding: 5px;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1;
+  text-transform: uppercase;
+  color: rgb(255, 255, 255);
+  background: rgba(172, 179, 248, 0.292);
+  margin: 0 3px 10px 3px;
+  transition: all 0.3s ease-in-out;
+  border-radius: 4px;
+}
+
 
 .site-block-tab .nav-item {
   text-transform: uppercase;
-  font-size: 0.8rem;
-  margin: 0 20px;
+  /* font-size: 0.8rem; */
+  /* margin: 0 20px; */
 }
 
 .site-block-tab .nav-item:first-child {
@@ -2013,13 +2037,13 @@ section {
   border-bottom: 2px solid transparent;
   border-radius: 0 !important;
   font-weight: bold;
-  color: #cccccc;
+  color: #ffffff;
 }
 
 .site-block-tab .nav-item > a:hover, .site-block-tab .nav-item > a.active {
   border-bottom: 2px solid #f23a2e;
-  color: rgb(94, 89, 89);
-}
+  color: rgb(108, 92, 92);
+} 
 
 .block-13, .slide-one-item {
   position: relative;
