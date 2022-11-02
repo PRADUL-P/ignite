@@ -1434,7 +1434,9 @@
                                       <div class="section-title">
                                         <h2>games Events</h2>
                                       </div>
-                                      <table class="table">
+                                      <table class="table" style="
+                                      margin-left: 25px;
+                                  ">
                                         <thead>
                                           <tr>
                                            <th scope="col">MEN</th>
@@ -1515,7 +1517,9 @@
                                       <div class="section-title">
                                         <h2>ATHLETIC EVENTS </h2>
                                       </div>
-                                      <table class="table">
+                                      <table class="table" style="
+                                      margin-left: 25px;
+                                  ">
                                         <thead>
                                           <tr>
                                            <th scope="col">MEN</th>
@@ -1603,7 +1607,9 @@
                                       <div class="section-title">
                                         <h2>DAY 1 EVENTS SCHEDULE</h2>
                                       </div>
-                                      <table class="table tb1">
+                                      <table class="table tb1" style="
+                                      margin-left: 25px;
+                                  ">
                                         <thead>
                                           <tr>
                                             <th scope="col">TIME</th>
@@ -1652,7 +1658,9 @@
                                     <div class="section-title">
                                       <h2>DAY 2 EVENTS SCHEDULE</h2>
                                     </div>
-                                    <table class="table tb2">
+                                    <table class="table tb2" style="
+                                    margin-left: 25px;
+                                ">
                                       <thead>
                                         <tr>
                                           <th scope="col">TIME</th>
@@ -1994,6 +2002,7 @@
       (
           async() => {
              // google sheet link   https://docs.google.com/spreadsheets/d/1VtO63fQeiapwbF4VraPim9hlnbQCCy7nowQjY2FoYwM/edit#gid=0
+            
               let workbook = XLSX.read(await (await fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vR2v0mbVt6a5WGHi67AQXpnBTZA-cPWSqpwBKQtX5pUlzK1bi7TMgVNN-EJHWLinm5JAXEW3jN2w7SZ/pub?gid=0&single=true&output=csv")).arrayBuffer());
               console.log(workbook);
               let worksheet = workbook.SheetNames;
