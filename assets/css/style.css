@@ -2018,7 +2018,7 @@ section {
 
 .site-block-tab .nav-item > a:hover, .site-block-tab .nav-item > a.active {
   border-bottom: 2px solid #f23a2e;
-  color: #000;
+  color: rgb(94, 89, 89);
 }
 
 .block-13, .slide-one-item {
@@ -2117,7 +2117,7 @@ section {
 }
 
 .block-12 .text .text-inner {
-  -webkit-box-shadow: 0 0 20px -5px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 0 20px -5px rgba(214, 18, 18, 0.3);
   box-shadow: 0 0 20px -5px rgba(0, 0, 0, 0.3);
   background: #fff;
   padding: 10px;
@@ -2479,4 +2479,69 @@ section {
   0%   { opacity: 0; }
   50%  { opacity: .5; }
   100% { opacity: 1; }
+}
+
+.titles {
+  text-align: center;
+  text-transform: capitalize;
+  color: #ffffff;
+  margin: 10px 0;
+  position: relative;
+}
+
+.titles::after {
+  content: "";
+  position: absolute;
+  width: 20%;
+  height: 2px;
+  background-image: linear-gradient(to left, transparent 5%, #726a95);
+  bottom: -10px;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+
+.team-rows {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 40px 0;
+}
+
+.members {
+  flex: 1 1 250px;
+  margin: 20px;
+  text-align: center;
+  padding: 20px 10px;
+  cursor: pointer;
+  max-width: 300px;
+  transition: all 0.3s;
+}
+
+.members:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-20px);
+}
+
+.members img {
+  display: block;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border: 4px solid #fcfcfc;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.members h2 {
+  text-transform: uppercase;
+  font-size: 24px;
+  color: #ffffff;
+  margin: 15px 0;
+}
+
+.members p {
+  font-size: 15px;
+  color: #f3f3f3;
+  line-height: 1.6;
 }
