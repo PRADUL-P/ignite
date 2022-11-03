@@ -2008,43 +2008,50 @@ section {
 .site-block-tab #pills-tab li {
   cursor: pointer;
   display: inline-block;
-  padding: 5px;
+  /* padding:  8px 16px 10px 16px; */
   font-size: 14px;
   font-weight: 800;
   line-height: 1;
   text-transform: uppercase;
-  color: rgb(255, 255, 255);
-  background: rgba(172, 179, 248, 0.292);
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
   margin: 0 3px 10px 3px;
   transition: all 0.3s ease-in-out;
   border-radius: 4px;
 }
+.site-block-tab #pills-tab li:hover,
+.site-block-tab #pills-tab li.filter-active {
+  background: #18d26e;
+}
 
 
+/* 
 .site-block-tab .nav-item {
   text-transform: uppercase;
-  /* font-size: 0.8rem; */
-  /* margin: 0 20px; */
+  font-size: 0.8rem; 
+  margin: 0 20px;
 }
 
 .site-block-tab .nav-item:first-child {
   margin-left: 0 !important;
 }
-
+/*  */
 .site-block-tab .nav-item > a {
-  padding-left: 0 !important;
-  background: none !important;
-  padding-right: 0 !important;
-  border-bottom: 2px solid transparent;
-  border-radius: 0 !important;
-  font-weight: bold;
+  /* padding-left: 0 !important; */
+  /* background: none !important; */
+  /* padding-right: 0 !important; */
+  /* border-bottom: 2px solid transparent; */
+  /* border-radius: 0 !important; */
+  /* font-weight: bold; */
   color: #ffffff;
 }
-
+ 
 .site-block-tab .nav-item > a:hover, .site-block-tab .nav-item > a.active {
-  border-bottom: 2px solid #f23a2e;
-  color: rgb(108, 92, 92);
-} 
+  /* border-bottom: 2px solid #f23a2e; */
+  /* color: rgb(108, 92, 92); */
+  background: #18d26e;
+  
+}  
 
 .block-13, .slide-one-item {
   position: relative;
