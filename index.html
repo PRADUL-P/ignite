@@ -10,12 +10,12 @@
     <meta property="og:url" content="https://www.stthomaskannur.ac.in/ignite2022" />
 <meta property="og:image" content="https://i.postimg.cc/HsMzBZfk/20221030-104903.jpg"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js" integrity="sha512-r22gChDnGvBylk90+2e/ycr3RVrDi8DIOkIGNhJlKfuyQM4tIRAI062MaV8sfjQKYVGjOBaZBOA87z+IhZE9DA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    
+    <script type="text/javascript" src="assets/js/flipdown.js"></script>
     
     <!-- Favicons -->
   <link href="assets/img/ignite.png" rel="icon">
   <link href="assets/img/ignite.png" rel="apple-touch-icon">
-
+  <link rel="stylesheet" type="text/css" href="assets/css/flipdown.css">
     <!-- Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
@@ -1233,11 +1233,14 @@
         <h2 data-aos="fade-up">
           ST THOMAS COLLEGE OF ENGINEERING & TECHNOLOGY, KANNUR
         </h2>
-<div>
+        <div class="example">
+        <div id="flipdown" class="flipdown "></div></div>
+<!-- <div>
   <script src="https://cdn.logwork.com/widget/countdown.js"></script>
   <a href="https://logwork.com/countdown-wm37" class="countdown-timer" data-style="flip3" data-timezone="Asia/Kolkata" data-textcolor="#ffffff" data-date="2022-11-06 08:41">Hey 👋 Calm Down</a>
-</div>
+</div> -->
 <div>
+  
   <a  data-aos="fade-up"  data-aos-delay="200"  href="https://www.stthomaskannur.ac.in/ignite/" class="btn-get-started animate__animated animate__fadeInUp scrollto">
     Register Now
   </a>
@@ -1340,12 +1343,14 @@
           <div class="members">
             <img src="assets/img/melvinsir1.jpg" alt="">
             <h2>Melvin Philip Mathew</h2>
-            <p>Assistant Professor<br>Mechanical Department</p>
+      <p>Assistant Professor<br>Mechanical Department</p>
+      <p> <i class="bx bx-phone-call"></i><a href="tel:+919745795045" target="_blank"> +919745795045</a></p>
           </div>
           <div class="members">
             <img src="assets/img/sir.jpeg" alt="">
             <h2>Adarsh Madhu</h2>
             <p>Assistant Professor<br>Mechanical Department</p>
+            <p> <i class="bx bx-phone-call"></i><a href="tel:+919995028016" target="_blank"> +919995028016</a></p>
           </div>
     
         </div>
@@ -1455,7 +1460,7 @@
                                       <div class="section-title">
                                         <h2>games Events</h2>
                                       </div>
-                                      <table class="table" style="
+                                      <table class="table ge" style="
                                       margin: 20px;
                                       margin-top: -10px;
                                   ">
@@ -1466,7 +1471,10 @@
                                                </tr>
                                         </thead>
                                         <tbody>
-                                          <tr>
+                                          <tr class="table ge">
+                                            
+                                          </tr> 
+                                          <!-- <tr>
                                             <td>BADMINTON - SINGLES </td>
                                             
                                             <td>BADMINTON - SINGLES </td>
@@ -1512,7 +1520,7 @@
                                             <td>VOLLEY BALL </td>
                                             
                                           
-                                          </tr>
+                                          </tr> -->
                                         </tbody>
                                       </table>
                                     </div>
@@ -1545,12 +1553,15 @@
                                       <div class="section-title">
                                         <h2>ATHLETIC EVENTS </h2>
                                       </div>
-                                      <table class="table" style="
+                                      <table class="table ae" style="
                                       margin: 20px;
                                       margin-top: -10px;
                                   ">
                                         <thead>
-                                          <tr>
+                                          <tr class="table ae">
+                                            
+                                          </tr> 
+                                          <!-- <tr>
                                            <th scope="col">MEN</th>
                                             <th scope="col">WOMEN</th>
                                                </tr>
@@ -1604,7 +1615,7 @@
                                             <td> </td>
                                          
                                        
-                                          </tr>
+                                          </tr> -->
                                         </tbody>
                                       </table>
                                     </div>
@@ -1922,7 +1933,8 @@
       
                   <div class="col-xl-3 col-lg-4 col-md-6" data-wow-delay="0.1s">
                     <div class="member">
-                      <img src="assets/img/cyborgs.jpg" class="img-fluid" alt="" />
+                      <!-- <img src="assets/img/cyborgs.jpg" class="img-fluid" alt="" /> -->
+                      <img src="assets/img/emperors.jpg" class="img-fluid" alt="" />
                       <!-- <img src="https://www.stthomaskannur.ac.in/ignite/statistics/img/emperors.jpg" class="img-fluid" alt="" /> -->
                       <div class="member-info">
                         <div class="member-info-content">
@@ -1933,7 +1945,8 @@
                           </div>
                       </div>
                     </div>
-                    <center><h4>cyborgs</h4></center>
+                    <center><h4>emperors</h4></center>
+                    <!-- <center><h4>cyborgs</h4></center> -->
                   </div>
       
                   <div class="col-xl-3 col-lg-4 col-md-6" data-wow-delay="0.2s">
@@ -2040,7 +2053,73 @@
       )()
 
     </script>
+    <script>
+      let games = document.querySelector(".ge");
+      (
+          async() => {
+            // google sheet link   https://docs.google.com/spreadsheets/d/1wZl2nQEHXt_nnPm884nucI9k1Pds99Ppw1LltxHi_ZU/edit#gid=0
+              let workbook = XLSX.read(await (await fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vSpBkBzpqRqsukIeaGEgPdqM7nKuHLspIlGaLNUkZEPDLvaGX0t0ec2VLe-3eiQAmixQu9r6bQr-xCk/pub?gid=0&single=true&output=csv")).arrayBuffer());
+              console.log(workbook);
+              let worksheet = workbook.SheetNames;
+              worksheet.forEach(name => {
+                  let html = XLSX.utils.sheet_to_html(workbook.Sheets[name]);
+                  games.innerHTML += `
+               ${html}
+                  `;
+                 
+              }
+              )
+          }
+      )()
 
+    </script>
+     <script>
+      let atletic = document.querySelector(".ae");
+      (
+          async() => {
+            // google sheet link   https://docs.google.com/spreadsheets/d/1wZl2nQEHXt_nnPm884nucI9k1Pds99Ppw1LltxHi_ZU/edit#gid=0
+              let workbook = XLSX.read(await (await fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vRne9AiRCraaNRhTgiFvjr7-8TRXmqgSX0t8xdMehShyfUTaYkEOSPpRqboXO9dhWyes4iTY45oM2Y0/pub?gid=0&single=true&output=csv")).arrayBuffer());
+              console.log(workbook);
+              let worksheet = workbook.SheetNames;
+              worksheet.forEach(name => {
+                  let html = XLSX.utils.sheet_to_html(workbook.Sheets[name]);
+                  atletic.innerHTML += `
+               ${html}
+                  `;
+                 
+              }
+              )
+          }
+      )()
+
+    </script>
+<script>
+ document.addEventListener('DOMContentLoaded', () => {
+
+// Unix timestamp (in seconds) to count down to
+var twoDaysFromNow = (new Date("nov 5, 2022 00:07:05").getTime() / 1000);
+
+// Set up FlipDown
+var flipdown = new FlipDown(twoDaysFromNow)
+
+  // Start the countdown
+  .start()
+
+  // Do something when the countdown ends
+  .ifEnded(() => {
+    console.log('The countdown has ended!');
+    document.getElementById("flipdown").style.display = "none";
+  })
+
+
+
+var ver = document.getElementById('ver');
+ver.innerHTML = flipdown.version;
+});
+
+
+
+</script>
     <!-- Vendor JS Files -->
     <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
