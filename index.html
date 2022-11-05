@@ -1561,13 +1561,13 @@
                                           <tr class="table ae">
                                             
                                           </tr> 
-                                          <!-- <tr>
+                                         <tr>
                                            <th scope="col">MEN</th>
                                             <th scope="col">WOMEN</th>
                                                </tr>
                                         </thead>
                                         <tbody>
-                                          <tr>
+                                          <!--  <tr>
                                             <td>100 M Race </td>
                                             
                                             <td>100 M Race  </td>
@@ -2057,7 +2057,7 @@
       let games = document.querySelector(".ge");
       (
           async() => {
-            // google sheet link   https://docs.google.com/spreadsheets/d/1wZl2nQEHXt_nnPm884nucI9k1Pds99Ppw1LltxHi_ZU/edit#gid=0
+            // google sheet link   https://docs.google.com/spreadsheets/d/1eT7ZbWkGbuR1aTRYBHLtTXisFlwnXtyAlGBRpaRBnH8/edit#gid=0
               let workbook = XLSX.read(await (await fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vSpBkBzpqRqsukIeaGEgPdqM7nKuHLspIlGaLNUkZEPDLvaGX0t0ec2VLe-3eiQAmixQu9r6bQr-xCk/pub?gid=0&single=true&output=csv")).arrayBuffer());
               console.log(workbook);
               let worksheet = workbook.SheetNames;
@@ -2077,7 +2077,7 @@
       let atletic = document.querySelector(".ae");
       (
           async() => {
-            // google sheet link   https://docs.google.com/spreadsheets/d/1wZl2nQEHXt_nnPm884nucI9k1Pds99Ppw1LltxHi_ZU/edit#gid=0
+            // google sheet link   https://docs.google.com/spreadsheets/d/1xnsFBC0S8Ayikn2xwkEu09Hj-w25x2FP0XKAI_tgHak/edit#gid=0
               let workbook = XLSX.read(await (await fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vRne9AiRCraaNRhTgiFvjr7-8TRXmqgSX0t8xdMehShyfUTaYkEOSPpRqboXO9dhWyes4iTY45oM2Y0/pub?gid=0&single=true&output=csv")).arrayBuffer());
               console.log(workbook);
               let worksheet = workbook.SheetNames;
