@@ -20,58 +20,24 @@
   .flipdown.flipdown__theme-dark .rotor-top,
   .flipdown.flipdown__theme-dark .rotor-leaf-front {
     color: #FFFFFF;
-    background-color: #151515;
+    background-color: #323131;
   }
   /* Rotor bottoms */
   .flipdown.flipdown__theme-dark .rotor-bottom,
   .flipdown.flipdown__theme-dark .rotor-leaf-rear {
     color: #EFEFEF;
-    background-color: #202020;
+    background-color: #323131;
   }
   /* Hinge */
   .flipdown.flipdown__theme-dark .rotor:after {
-    border-top: solid 1px #151515;
+    border-top: solid 1px #111111;
   }
-  
-  /********** Theme: light **********/
-  /* Font styles */
-  .flipdown.flipdown__theme-light {
-    font-family: sans-serif;
-    font-weight: bold;
-  }
-  /* Rotor group headings */
-  .flipdown.flipdown__theme-light .rotor-group-heading:before {
-    color: #EEEEEE;
-  }
-  /* Delimeters */
-  .flipdown.flipdown__theme-light .rotor-group:nth-child(n+2):nth-child(-n+3):before,
-  .flipdown.flipdown__theme-light .rotor-group:nth-child(n+2):nth-child(-n+3):after {
-    background-color: #DDDDDD;
-  }
-  /* Rotor tops */
-  .flipdown.flipdown__theme-light .rotor,
-  .flipdown.flipdown__theme-light .rotor-top,
-  .flipdown.flipdown__theme-light .rotor-leaf-front {
-    color: #222222;
-    background-color: #DDDDDD;
-  }
-  /* Rotor bottoms */
-  .flipdown.flipdown__theme-light .rotor-bottom,
-  .flipdown.flipdown__theme-light .rotor-leaf-rear {
-    color: #333333;
-    background-color: #EEEEEE;
-  }
-  /* Hinge */
-  .flipdown.flipdown__theme-light .rotor:after {
-    border-top: solid 1px #222222;
-  }
-  
-  /* END OF THEMES */
+ 
   
   .flipdown {
     overflow: visible;
-    width: 210px;
-    height: 60px;
+    width: 510px;
+    height: 110px;
   }
   
   .flipdown .rotor-group {
@@ -208,6 +174,7 @@
     width: 50px;
     height: 40px;
     border-radius: 0px 0px 4px 4px;
+    
   }
   
   @media (max-width: 550px) {
@@ -215,11 +182,14 @@
     .flipdown {
       width: 312px;
       height: 60px;
+     
+
     }
   
     .flipdown .rotor {
       font-size: 2.2rem;
       margin-right: 3px;
+      
     }
   
     .flipdown .rotor,
@@ -230,6 +200,7 @@
     .flipdown .rotor-bottom,
     .flipdown .rotor:after {
       width: 30px;
+      
     }
   
     .flipdown .rotor-group {
