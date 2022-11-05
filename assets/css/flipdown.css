@@ -174,7 +174,6 @@
     width: 50px;
     height: 40px;
     border-radius: 0px 0px 4px 4px;
-    
   }
   
   @media (max-width: 550px) {
@@ -200,7 +199,6 @@
     .flipdown .rotor-bottom,
     .flipdown .rotor:after {
       width: 30px;
-      
     }
   
     .flipdown .rotor-group {
